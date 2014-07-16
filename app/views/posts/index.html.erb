@@ -1,0 +1,14 @@
+<% provide(:title, "All Posts") %>
+<h1>All Posts</h1>
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+		<%= will_paginate(inner_window: 1, outer_window: 1) %>
+
+			<div class="posts">
+				<%= render @posts %>
+			</div>
+
+		<%= will_paginate(inner_window: 1, outer_window: 1) %>
+	</div>
+</div>

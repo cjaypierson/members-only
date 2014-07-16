@@ -1,0 +1,17 @@
+<header>
+	<div class="container-fluid">
+		<nav role="navigation" class="navbar navbar-fixed-top navbar-inverse">
+			<%= link_to "theClubhouse", root_path, id: "logo" %>
+			<ul class="nav navbar-nav navbar-right">
+				<li><%= link_to "Posts", posts_path %></li>
+				<% if signed_in? %>
+					<li><%= link_to "Profile", current_user %></li>
+					<li><%= link_to "Sign out", signout_path, method: :delete %></li>
+				<% else %>
+					<li><%= link_to "Sign up", signup_path %></li>
+					<li><%= link_to "Sign in", signin_path %></li>
+				<% end %>
+			</ul>
+		</nav>
+	</div>
+</header>

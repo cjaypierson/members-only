@@ -5,6 +5,7 @@ html {
 
 body {
 	padding-top: 60px;
+	background-color: #ECECEA;
 }
 
 section {
@@ -25,6 +26,7 @@ textarea {
 /* Typography */
 h1 {
 	text-align: center;
+	font-size: 3em;
 }
 
 /* Forms */
@@ -52,3 +54,85 @@ input {
 		border: 1px solid #f00;
 	}
 }
+
+/* Header */
+
+#logo {
+	color: white;
+	font-weight: bold;
+	font-size: 2.8em;
+	margin: 0 20px;
+	letter-spacing: -1px;
+	&:hover {
+		text-decoration: none;
+		
+	}
+}
+
+.nav li {
+	font-size: 1.2em;
+	&:last-child {
+		margin-right: 20px;
+	}
+}
+
+/* All Posts */
+
+.posts {
+	list-style: none;
+	padding: 0;
+}
+.postss {
+	margin: 10px 0;
+}
+
+div.pagination {
+	width: 100%;
+}
+ul.pagination {
+	float: right;
+	margin: 0;
+	a {
+		border: none;
+		border-radius: 2em !important;
+		margin: 0 0 !important;
+	}
+	.active {
+		a {
+			background-color: $gray;
+			border-radius: 2em;
+			border-color: $gray-light;
+			&:hover {
+				background-color: $gray;
+			}
+		}
+	}
+	.disabled {
+		a {
+			cursor: auto !important;
+		}
+	}
+}
+
+.post-title {
+	padding: -3px 0 0 0;
+	line-height: 70%;
+	a {
+		color: #558C89;
+	}
+}
+
+.post-body {
+	border-bottom: 1px solid  #74AFAD;
+	padding: 0 0 15px 0;
+}
+.post-author {
+	a {
+		color: #D9853B;
+	}
+}
+
+
+
+
+

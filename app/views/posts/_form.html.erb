@@ -1,0 +1,18 @@
+<%= form_for [@user,@post] do |p| %>
+
+	<div id="error_explanation">
+		<ul>
+			<% @post.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %> 
+		</ul>
+	</div>
+			
+	<%= p.label :title %>
+	<%= p.text_field :title %>
+
+	<%= p.label :body, "Your post" %>
+	<%= p.text_area :body, size: "7x7" %>
+
+	<%= p.submit class: "btn btn-large btn-primary" %>
+<% end %>

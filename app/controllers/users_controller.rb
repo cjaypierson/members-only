@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-	
+	before_action :signed_in_user, only: [:show]
+
 	def new
 		@user = User.new
 	end
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		@user_posts = @user.posts.all
 	end
 
 	private
