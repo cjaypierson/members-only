@@ -9,6 +9,7 @@ gem 'pg'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -36,7 +37,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
 group :production do
-	gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+	gem 'rails_12factor'
 end
 
 # Use unicorn as the app server
