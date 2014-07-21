@@ -1,7 +1,8 @@
 <% provide(:title, @post.title) %>
-<div class="row">
+<div class="row post_view">
 	<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
-		<h1><%= @post.title %></h1>
+		<h1 class= "post-title"><%= @post.title %></h1>
 		<p><%= @post.body %></p>
+		<%= render 'post_management', { post: @post } %>
 	</div>
 </div>

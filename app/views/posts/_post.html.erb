@@ -1,5 +1,10 @@
-<h3 class="post-title"><%= link_to post.title, post %></h3>
-<% if signed_in? %>
-	<p class="post-author">By: <%= link_to post.user.name, post.user %></em></p>
-<% end %>
-<p class="post-body"><%= post.body %></p>
+<div class="post">
+	<h3 class="post-title"><%= link_to post.title, post %></h3>
+	<!-- <%= render 'posts/post_management', { post: post } %> -->
+	<div class="post-body">
+		<p><%= post.body %></p>
+	</div>
+	<% if signed_in? %>
+		<span class="post-author">By: <%= link_to post.user.name, post.user %></span>
+	<% end %>
+</div>

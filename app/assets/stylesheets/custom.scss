@@ -20,6 +20,7 @@ textarea {
 	text-align: center;
 	h1 {
 		margin-bottom: 10px;
+		font-weight: bold;
 	}
 }
 
@@ -60,7 +61,7 @@ input {
 #logo {
 	color: white;
 	font-weight: bold;
-	font-size: 2.8em;
+	font-size: 2.6em;
 	margin: 0 20px;
 	letter-spacing: -1px;
 	&:hover {
@@ -115,20 +116,72 @@ ul.pagination {
 }
 
 .post-title {
-	padding: -3px 0 0 0;
-	line-height: 70%;
+	text-align: center;
+	color: #c37735;
 	a {
-		color: #558C89;
+		color: #c37735;
 	}
 }
 
 .post-body {
-	border-bottom: 1px solid  #74AFAD;
-	padding: 0 0 15px 0;
+	/* border-bottom: 1px solid  #74AFAD; */
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
 }
 .post-author {
+	text-transform: capitalize;
+	a {
+		color: #fff;
+	}
+}
+
+.post-management {
+	float: right;
 	a {
 		color: #D9853B;
+	}
+}
+
+.post {
+	position: relative;
+	padding: 20px;
+  margin: 1.6%;
+  background: #74AFAD;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.3em;
+  border: 2px dashed #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px #74AFAD, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  font-weight: normal;
+  width: 30%;
+  height: 250px;
+  float: left;
+  overflow: hidden;
+	.post-title {
+		margin-top: 0px;
+		max-height: 270px;
+		overflow: hidden;
+		h3 {
+			text-align: center;
+		}
+	}
+	.post-author {
+		font-size: 0.9em;
+		line-height: 50%;
+		display: inline-block;
+		position: absolute;
+		bottom: 15px;
+		right: 10px;
+	}
+	.post-body {
+		margin-top: 10px;
+		height: 108px;
+		overflow: hidden;
+		padding-left: 5px;
+		display: block;
 	}
 }
 

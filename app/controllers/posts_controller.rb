@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 	before_action :signed_in_user, only: [:new, :create, :edit, :udpate, :destroy]
 
 	def index
-		@posts = Post.paginate(page: params[:page], per_page: 10)
+		@posts = Post.paginate(page: params[:page], per_page: 9)
 	end
 
 	def new
@@ -34,6 +34,10 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
+		@post = Post.find(params[:id])
+		@post.destroy
+		flash.notice = "Post Deleted"
+		redirect_to current_user
 	end
 
 	private

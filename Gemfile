@@ -35,6 +35,10 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
+group :production do
+	gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
